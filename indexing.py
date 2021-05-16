@@ -341,7 +341,7 @@ def load_docs_info(path):
 
 def boolean_retrieval(query, vocab, docs_info):
 
-    print(f"[Boolean-Retriever] Querying '{query}' against index ... ")
+    print(f"\n[Boolean-Retriever] Querying '{query}' against index ... ")
     start_time = time.time()
 
     # tokenize query
@@ -374,12 +374,15 @@ def boolean_retrieval(query, vocab, docs_info):
                     query_matches.add(docs_info[doc_id]["path"])
 
     if len(query_matches):
-        list(query_matches).sort()
+        # sort file names in lexiographic order
+        query_matches = list(query_matches)
+        query_matches.sort()
+
         for match in query_matches:
             print(f"[Boolean-Retriever] match found at '{match}'")
 
         end_time = time.time()
-        print(f"[Boolean-Retriever] Found {len(query_matches)} matches in {(end_time - start_time):.3f} seconds.")
+        print(f"[Boolean-Retriever] Found {len(query_matches)} matches for '{query}' in {(end_time - start_time):.3f} seconds.")
     else:
         print("[Boolean-Retriever] No Match Found.")
 

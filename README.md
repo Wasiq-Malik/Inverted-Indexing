@@ -32,8 +32,7 @@
     <li><a href="#usage">Usage</a></li>
     <ul>
         <li><a href="#how-to-run">How to Run</a></li>
-        <li><a href="#example-images">Example Images</a></li>
-      </ul>
+    </ul>
     <li><a href="#license">License</a></li>
   </ol>
 </details>
@@ -67,7 +66,7 @@ To get a local copy up and running follow these simple steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/saeenyoda/Inverted_Indexing.git
+   git clone https://github.com/WasiqMalik/Inverted-Indexing.git
    ```
 2. Install Requirements
    ```sh
